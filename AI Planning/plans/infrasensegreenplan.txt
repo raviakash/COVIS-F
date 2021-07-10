@@ -1,0 +1,12 @@
+ (:action lightgreen
+    :parameters (lightglowgp lightglowgp)
+    :precondition
+      (and
+        (lightg lightglowgp)
+        (not
+          (lightglowg lightglowgp)
+        )
+      )
+    :effect
+      (lightglowg lightglowgp)
+  )

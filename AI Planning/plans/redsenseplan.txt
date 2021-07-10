@@ -1,0 +1,16 @@
+ (:action motor4_actuate
+    :parameters (motoract4p rgbsenseredp)
+    :precondition
+      (and
+        (motoract4 motoract4p)
+        (not
+          (actuate4 motoract4p)
+        )
+        (or
+          (rgbsensered rgbsenseredp)
+          (colordetectgreen rgbsenseredp)
+        )
+      )
+    :effect
+      (actuate4 motoract4p)
+  )

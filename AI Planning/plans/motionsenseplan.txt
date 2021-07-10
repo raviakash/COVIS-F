@@ -1,0 +1,16 @@
+(:action light_glow
+    :parameters (pir1p light1p)
+    :precondition
+      (and
+        (light1 light1p)
+        (not
+          (lightglow1 light1p)
+        )
+        (or
+          (pir1 pir1p)
+          (motion1 pir1p)
+        )
+      )
+    :effect
+      (lightglow1 light1p)
+  )

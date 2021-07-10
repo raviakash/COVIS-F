@@ -1,0 +1,12 @@
+ (:action lightred
+    :parameters (lightglowrp lightglowrp)
+    :precondition
+      (and
+        (lightr lightglowrp)
+        (not
+          (lightglowr lightglowrp)
+        )
+      )
+    :effect
+      (lightglowr lightglowrp)
+  )

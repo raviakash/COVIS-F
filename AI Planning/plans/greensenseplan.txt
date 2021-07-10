@@ -1,0 +1,16 @@
+(:action motor2_actuate
+    :parameters (motoract2p rgbsensegreenp)
+    :precondition
+      (and
+        (motoract2 motoract2p)
+        (not
+          (actuate2 motoract2p)
+        )
+        (or
+          (rgbsensegreen rgbsensegreenp)
+          (colordetectgreen rgbsensegreenp)
+        )
+      )
+    :effect
+      (actuate2 motoract2p)
+  )

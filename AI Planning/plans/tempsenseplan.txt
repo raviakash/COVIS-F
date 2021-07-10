@@ -1,0 +1,16 @@
+(:action fan_actuate
+    :parameters (tempc motoract3c)
+    :precondition
+      (and
+        (motoract3 motoract3c)
+        (not
+          (actuate3 motoract3c)
+        )
+        (or
+          (temp tempc)
+          (tempdetect tempc)
+        )
+      )
+    :effect
+      (actuate3 motoract3c)
+  )
