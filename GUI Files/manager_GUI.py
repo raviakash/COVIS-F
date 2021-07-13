@@ -3,7 +3,7 @@ import plotly
 import plotly.graph_objects as go
 import pandas as pd
 from tkinter import *
-from publisher_for_GUI import *
+from publisher_manager_GUI import *
 from PIL import Image, ImageTk
 import os
 from plotly.subplots import make_subplots
