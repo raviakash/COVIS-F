@@ -3,7 +3,7 @@ import plotly
 import plotly.graph_objects as go
 import pandas as pd
 from tkinter import *
-from publisher_manager_GUI import *
+from publisher_for_GUI import *
 from PIL import Image, ImageTk
 import os
 from plotly.subplots import make_subplots
@@ -146,12 +146,6 @@ b4.place(x=250, y=350)
 b5 = tk.Button(root, image=photo5,bg="black",fg="black",border = 0,command = voice_msg)
 b5.place(x=600, y=350)
 
-b6 = tk.Button(root,text="SEND",bg="green",fg="black",border = 0,command = room1)
-b6.place(x=1245, y=605)
-
-b7 = tk.Button(root,text="SEND",bg="green",fg="black",border = 0,command = room2)
-b7.place(x=1445, y=605)
-
 
 # Imporintg Images and resizing
 image = Image.open("back2.png")
@@ -232,6 +226,13 @@ button11.place(x=960,y=470)
 
 
 #Sliders for temperature control
+
+b6 = tk.Button(root,text="SEND",bg="green",fg="black",border = 0,command = room1)
+b6.place(x=1245, y=605)
+
+b7 = tk.Button(root,text="SEND",bg="green",fg="black",border = 0,command = room2)
+b7.place(x=1445, y=605)
+
 
 w1 = Scale(root,label='TEMP.',
             variable = var1,
