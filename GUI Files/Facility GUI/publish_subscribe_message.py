@@ -30,12 +30,10 @@ def play():
     os.system("manager_msg.mp3")
     
 Connected = False   #global variable for the state of the connection
-print("bandee")
 broker_address= "192.168.1.8"
 port = 1883
 user = ""
 password = ""
-print("bandee")
 client = mqttClient.Client("new_user_messager")               #create new instance
 client.username_pw_set(user, password=password)    #set username and password
 client.on_connect= on_connect                      #attach function to callback
@@ -43,4 +41,3 @@ client.connect(broker_address, port=port)          #connect to broker
 client.subscribe("to_user_message")
 client.on_message= on_message
 client.loop_start()        #start the loop
-print("bandee")
