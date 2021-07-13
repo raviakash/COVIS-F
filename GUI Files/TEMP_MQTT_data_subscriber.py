@@ -24,17 +24,17 @@ def on_message(client, userdata, msg):
     value = msg.payload.decode('utf-8')
     j,temp=value.split(",")
  
-    print(temp)
-    i = i + 1
-
-    #--------- Accessing the System Time ---------#
-    
-    now = datetime.now()
-    current_time = now.strftime("%H:%M:%S")
-    
-    #--------- Writing to Excel file -------------#
-    sheet.write(i,0,current_time)    
-    sheet.write(i,1,temp)
+    if(int(j)==2):
+        i = i + 1
+        print(temp)
+        #--------- Accessing the System Time ---------#
+        
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+        
+        #--------- Writing to Excel file -------------#
+        sheet.write(i,0,current_time)    
+        sheet.write(i,1,temp)
     wb.save("temp_data.xls") 
 
 
